@@ -84,6 +84,6 @@ if __name__ == '__main__':
 	plot_degree_distribution(degree_sequence)
 	(deg, bet, eig) = get_centralities(G)
 
-	print(n_most_central(deg, 5))
-	print(n_most_central(bet, 5))
-	print(n_most_central(eig, 5))
+	print(n_most_central(deg, 10))
+	print(n_most_central(bet, 10))
+	print(n_most_central(eig, 10))

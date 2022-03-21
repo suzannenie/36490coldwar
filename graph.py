@@ -161,11 +161,10 @@ def get_jaccard_index(G, H):
 
 def get_scraped_graph():
     namesdf = pd.read_csv("names.csv")
-    (names, txtfiles, mydata) = getfreqmatrix("frequency.csv")  
-    A = make_adjacency_matrix(mydata, names)
-    (G, f1) = nx_graph_from_adjacency_matrix(A, names, namesdf, 2)
-    return (G, f1)
-
+    (names, ids, basedata) = getfreqmatrix("baseline/baseline_frequency.csv")
+    basemat = make_adjacency_matrix(basedata, names)
+    (baseG, basef) = nx_graph_from_adjacency_matrix(basemat, names, namesdf, 2)
+    return (baseG, basef)
 if __name__ == "__main__":
     namesdf = pd.read_csv("names.csv")
 
