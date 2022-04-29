@@ -1,0 +1,270 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+SBM Packages
+
+```{r}
+#install.packages("sbm")
+library(sbm)
+library(ggplot2)
+library(knitr)
+library(magrittr)
+library(dplyr)
+theme_set(theme_bw())
+```
+
+```{r}
+<<<<<<< HEAD:stochastic model modelling.Rmd
+baseline_frequency = read.csv("baseline/baseline_frequency.csv")
+
+=======
+baseline_frequency = read.csv("baseline_frequency.csv")
+#baseline_frequency[1,1]
+>>>>>>> 372decd397b5c8051254b5b59e5e74c9c95736dc:stochastic block model.Rmd
+str(baseline_frequency, max.level = 1) 
+```
+row 4 15 17 18 22 27 29 32 34 35 38 41 46 47 48 56 58 are exempted
+```{r}
+baseline_frequency = baseline_frequency[,-1]
+baseline_frequency
+rowSums = rowSums(baseline_frequency[1:108])
+```
+
+
+We first consider the binary network where an edge is drawn between two persons when they do share a least one common network:
+```{r}
+library(gtools)
+#binary person-person network matrix
+vec=c()
+rowdata = rep(0,108*108)
+mat = matrix(rowdata,ncol=108, nrow=108, byrow=T)
+
+for (j in 1:62){
+  for (i in 1:108){
+    if (baseline_frequency[j,i] == 1)
+      vec = append(vec, i)
+  }
+  if (length(vec) > 1){
+    res = permutations(n=length(vec),r=2,v=vec)
+    nrow = nrow(res)
+    for (i in 1:nrow){
+    newRow = res[i,1]
+    newCol = res[i,2]
+    mat[newRow, newCol] = 1
+      }
+  }
+
+  vec = c()
+}
+person_person_binary = mat
+diag(person_person_binary) = 0
+#person_person_binary
+
+
+```
+
+https://www.geeksforgeeks.org/calculate-combinations-and-permutations-in-r/#:~:text=permutations()%20method%20in%20R,vector%20subjected%20to%20the%20constraints.
+
+
+```{r}
+baseline_frequency[5, 1] 
+
+```
+
+The simple function plotMyMatrix can be use to represent simple or bipartite SBM:
+```{r}
+plotMyMatrix(person_person_binary, dimLabels = list(row = 'person', col = 'person') )
+```
+
+We look for some latent structure of the network by adjusting a simple SBM with the function estimateSimpleSBM.
+s
+```{r}
+mySimpleSBM <- person_person_binary %>% 
+  estimateSimpleSBM("bernoulli", dimLabels = 'person', estimOptions = list(verbosity = 0, plot = FALSE))
+```
+
+Once fitted, the user can manipulate the fitted model by accessing the various fields and methods enjoyed by the class simpleSBMfit. Most important fields and methods are recalled to the user via the show method:
+```{r}
+class(mySimpleSBM)
+
+mySimpleSBM
+```
+
+```{r}
+mySimpleSBM$plot()
+```
+
+```{r}
+mySimpleSBM$memberships
+#> [1] 7
+mySimpleSBM$nbNodes
+#> person
+#>   108
+mySimpleSBM$nbCovariates
+#> [1] 0
+```
+
+The plot method is available as a S3 or R6 method. The default represents the network data reordered according to the memberships estimated in the SBM
+```{r}
+plot(mySimpleSBM, type = "data", dimLabels  = list(row = 'person', col= 'person'))
+
+```
+One can also plot the expected network which, in case of the Bernoulli model, corresponds to the probability of connection between any pair of nodes in the network.
+```{r}
+plot(mySimpleSBM, type = "expected")
+```
+
+```{r}
+plot(mySimpleSBM, type = "meso")
+```
+
+```{r}
+coef(mySimpleSBM, 'block')
+
+coef(mySimpleSBM, 'connectivity')
+```
+
+```{r}
+mySimpleSBM$storedModels %>% kable()
+```
+
+We can then see what models are competitive in terms of model selection by checking the ICL
+```{r}
+mySimpleSBM$storedModels %>%  ggplot() + aes(x = nbBlocks, y = ICL)  + geom_line() + geom_point(alpha = 0.5)
+
+```
+The 4-block model could have been a good choice too, in place of the 5-block model. The user can update the current simpleSBMfit thanks to the the setModel method:
+```{r}
+mySimpleSBM$setModel(4)
+mySimpleSBM$nbBlocks
+#> [1] 4
+mySimpleSBM$plot(type = 'expected')
+```
+
+```{r}
+mySimpleSBM$setModel(5)
+```
+
+Analysis of the weighted interaction network
+
+Instead of considering the binary network person-person we may consider the weighted network where the link between two persons is the number of documents they share.
+
+We plot the matrix with function plotMyMatrix:
+
+```{r}
+library(gtools)
+#person-person network matrix (non-binary)
+
+rowdata = rep(0,108*108)
+mat = matrix(rowdata,ncol=108, nrow=108, byrow=T)
+
+for (j in 1:62){
+  for (i in 1:108){
+    if (baseline_frequency[j,i] == 1)
+      vec = append(vec, i)
+  }
+  if (length(vec) > 1){
+    res = permutations(n=length(vec),r=2,v=vec)
+    nrow = nrow(res)
+    for (i in 1:nrow){
+    newRow = res[i,1]
+    newCol = res[i,2]
+    mat[newRow, newCol] =  mat[newRow, newCol] + 1
+      }
+  }
+
+  vec = c()
+}
+person_person = mat
+diag(person_person) = 0
+
+```
+
+```{r}
+
+plotMyMatrix(person_person, dimLabels = list(row = 'person', col = 'person'))
+
+```
+
+```{r}
+mySimpleSBMPoisson <- person_person %>% 
+  estimateSimpleSBM("poisson", dimLabels = 'person', estimOptions = list(verbosity = 0, plot = FALSE))
+```
+
+```{r}
+class(mySimpleSBMPoisson)
+
+mySimpleSBMPoisson
+```
+
+```{r}
+mySimpleSBMPoisson$nbBlocks
+
+mySimpleSBMPoisson$nbNodes
+
+mySimpleSBMPoisson$nbCovariates
+
+```
+
+```{r}
+plot(mySimpleSBMPoisson, type = "data", dimLabels = list(row = 'person', col= 'person'))
+
+```
+
+```{r}
+plot(mySimpleSBMPoisson, type = "expected", dimLabels = list(row = 'person', col= 'person'))
+
+```
+
+```{r}
+plot(mySimpleSBMPoisson, type = "meso")
+```
+
+```{r}
+coef(mySimpleSBMPoisson, 'block')
+# [1] 0.02854656 0.09300262 0.16600128 0.06542478 0.19587765 0.45114711
+coef(mySimpleSBMPoisson, 'connectivity')
+```
+
+
+```{r}
+names_covar = read.csv("names_copy.csv")
+east_west = names_covar$affiliation
+levels(east_west) <- c(1,0)
+east_west = as.integer(unlist(east_west))
+east_west
+```
+
+
+
+
+```{r}
+mySimpleSBMCov<- 
+  person_person %>% 
+  estimateSimpleSBM(
+    model = 'poisson', 
+    directed = FALSE, 
+    dimLabels = 'person',
+    covariates  = east_west,
+    estimOptions = list(verbosity = 0, plot = FALSE, nbCores = 2)
+  )
+```
+
+```{r}
+library(tidyverse)
+library(sbmR)
+
+k <- 3    
+n_k <- 40 
+network <- sim_basic_block_network(
+  n_blocks = k,     
+  n_nodes_per_block = n_k
+)
+visualize_network(network)
+```
+
+
+

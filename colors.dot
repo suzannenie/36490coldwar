@@ -1,546 +1,495 @@
 strict graph "" {
 	node [style=filled];
-	subgraph cluster4 {
-		graph [color=green,
-			style=filled
-		];
-		behoff	[fillcolor=blue,
-			nodetype=green];
-		hoover	[fillcolor=blue,
-			nodetype=green];
-		behoff -- hoover;
-		ladd	[fillcolor=blue,
-			nodetype=green];
-		behoff -- ladd;
-		lawrence	[fillcolor=blue,
-			nodetype=green];
-		behoff -- lawrence;
-		poole	[fillcolor=blue,
-			nodetype=green];
-		behoff -- poole;
-		sheltt	[fillcolor=blue,
-			nodetype=green];
-		behoff -- sheltt;
-		hier	[fillcolor=blue,
-			nodetype=green];
-		hier -- hoover;
-		leiser	[fillcolor=red,
-			nodetype=green];
-		hier -- leiser;
-		ponikiewski	[fillcolor=red,
-			nodetype=green];
-		hier -- ponikiewski;
-		tormay	[fillcolor=red,
-			nodetype=green];
-		hier -- tormay;
-		hoover -- ladd;
-		hoover -- lawrence;
-		hoover -- ponikiewski;
-		hoover -- poole;
-		hoover -- sheltt;
-		hoover -- tormay;
-		ladd -- lawrence;
-		ladd -- poole;
-		ladd -- sheltt;
-		lawrence -- poole;
-		lawrence -- sheltt;
-		leiser -- ponikiewski;
-		leiser -- tormay;
-		ponikiewski -- tormay;
-		poole -- sheltt;
-	}
-	subgraph cluster5 {
-		graph [color=blue,
-			style=filled
-		];
-		dosti	[fillcolor=red,
-			nodetype=blue];
-		ermenji	[fillcolor=red,
-			nodetype=blue];
-		dosti -- ermenji;
-		fresheri	[fillcolor=red,
-			nodetype=blue];
-		dosti -- fresheri;
-		ketts	[fillcolor=red,
-			nodetype=blue];
-		dosti -- ketts;
-		kuni	[fillcolor=red,
-			nodetype=blue];
-		dosti -- kuni;
-		kupi	[fillcolor=red,
-			nodetype=blue];
-		dosti -- kupi;
-		kyresin	[fillcolor=red,
-			nodetype=blue];
-		dosti -- kyresin;
-		markham	[fillcolor=blue,
-			nodetype=blue];
-		dosti -- markham;
-		pali	[fillcolor=red,
-			nodetype=blue];
-		dosti -- pali;
-		zog	[fillcolor=red,
-			nodetype=blue];
-		dosti -- zog;
-		ermenji -- kupi;
-		ermenji -- zog;
-		fresheri -- ketts;
-		fresheri -- kuni;
-		fresheri -- kyresin;
-		fresheri -- markham;
-		fresheri -- pali;
-		graf	[fillcolor=red,
-			nodetype=blue];
-		konkoly	[fillcolor=red,
-			nodetype=blue];
-		graf -- konkoly;
-		palasthy	[fillcolor=red,
-			nodetype=blue];
-		graf -- palasthy;
-		popa	[fillcolor=red,
-			nodetype=blue];
-		graf -- popa;
-		rademaekers	[fillcolor=blue,
-			nodetype=blue];
-		graf -- rademaekers;
-		steele	[fillcolor=blue,
-			nodetype=blue];
-		graf -- steele;
-		ketts -- kuni;
-		ketts -- kyresin;
-		ketts -- markham;
-		ketts -- pali;
-		konkoly -- palasthy;
-		konkoly -- popa;
-		konkoly -- rademaekers;
-		konkoly -- steele;
-		kuni -- kyresin;
-		kuni -- markham;
-		kuni -- pali;
-		kupi -- zog;
-		kyresin -- markham;
-		kyresin -- pali;
-		markham -- pali;
-		palasthy -- popa;
-		palasthy -- rademaekers;
-		palasthy -- steele;
-		popa -- rademaekers;
-		popa -- steele;
-		rademaekers -- steele;
-	}
-	subgraph cluster3 {
-		graph [color=yellow,
-			style=filled
-		];
-		adenauer	[fillcolor=blue,
-			nodetype=yellow];
-		conant	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- conant;
-		jackson	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- jackson;
-		kyes	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- kyes;
-		morgan	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- morgan;
-		smith	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- smith;
-		stassen	[fillcolor=blue,
-			nodetype=yellow];
-		adenauer -- stassen;
-		conant -- jackson;
-		conant -- kyes;
-		conant -- morgan;
-		conant -- smith;
-		conant -- stassen;
-		eisenhower	[fillcolor=blue,
-			nodetype=yellow];
-		eisenhower -- jackson;
-		eisenhower -- kyes;
-		eisenhower -- morgan;
-		phillips	[fillcolor=blue,
-			nodetype=yellow];
-		eisenhower -- phillips;
-		eisenhower -- smith;
-		eisenhower -- stassen;
-		stein	[fillcolor=blue,
-			nodetype=yellow];
-		eisenhower -- stein;
-		jackson -- kyes;
-		jackson -- morgan;
-		jackson -- phillips;
-		jackson -- smith;
-		jackson -- stassen;
-		jackson -- stein;
-		kyes -- morgan;
-		kyes -- phillips;
-		kyes -- smith;
-		kyes -- stassen;
-		kyes -- stein;
-		morgan -- phillips;
-		morgan -- smith;
-		morgan -- stassen;
-		morgan -- stein;
-		phillips -- smith;
-		phillips -- stassen;
-		phillips -- stein;
-		smith -- stassen;
-		smith -- stein;
-		stassen -- stein;
-	}
-	subgraph cluster6 {
-		graph [color=purple,
-			style=filled
-		];
-		aschan	[fillcolor=blue,
-			nodetype=purple];
-		barbour	[fillcolor=blue,
-			nodetype=purple];
-		barrett	[fillcolor=blue,
-			nodetype=purple];
-		barbour -- barrett;
-		brown	[fillcolor=blue,
-			nodetype=purple];
-		barbour -- brown;
-		devine	[fillcolor=blue,
-			nodetype=purple];
-		barbour -- devine;
-		kohler	[fillcolor=blue,
-			nodetype=purple];
-		barbour -- kohler;
-		barrett -- brown;
-		barrett -- devine;
-		drumond	[fillcolor=blue,
-			nodetype=purple];
-		barrett -- drumond;
-		gomulka	[fillcolor=red,
-			nodetype=purple];
-		barrett -- gomulka;
-		griffiths	[fillcolor=blue,
-			nodetype=purple];
-		barrett -- griffiths;
-		barrett -- kohler;
-		mcgurn	[fillcolor=blue,
-			nodetype=purple];
-		barrett -- mcgurn;
-		bennet	[fillcolor=blue,
-			nodetype=purple];
-		meyer	[fillcolor=blue,
-			nodetype=purple];
-		bennet -- meyer;
-		morner	[fillcolor=blue,
-			nodetype=purple];
-		bennet -- morner;
-		murphy	[fillcolor=blue,
-			nodetype=purple];
-		bennet -- murphy;
-		rearns	[fillcolor=blue,
-			nodetype=purple];
-		bennet -- rearns;
-		bohlen	[fillcolor=blue,
-			nodetype=purple];
-		mathews	[fillcolor=blue,
-			nodetype=purple];
-		bohlen -- mathews;
-		reinhardt	[fillcolor=blue,
-			nodetype=purple];
-		bohlen -- reinhardt;
-		bross	[fillcolor=blue,
-			nodetype=purple];
-		brown -- devine;
-		brown -- kohler;
-		bruce	[fillcolor=blue,
-			nodetype=purple];
-		foster	[fillcolor=blue,
-			nodetype=purple];
-		bruce -- foster;
-		devine -- kohler;
-		drumond -- gomulka;
-		drumond -- griffiths;
-		drumond -- mcgurn;
-		göttling	[fillcolor=red,
-			nodetype=purple];
-		foster -- göttling;
-		lyon	[fillcolor=blue,
-			nodetype=purple];
-		foster -- lyon;
-		nuschke	[fillcolor=red,
-			nodetype=purple];
-		foster -- nuschke;
-		willi	[fillcolor=red,
-			nodetype=purple];
-		foster -- willi;
-		gomulka -- griffiths;
-		gomulka -- mcgurn;
-		griffiths -- mcgurn;
-		grittenberger	[fillcolor=red,
-			nodetype=purple];
-		kirkpatrick	[fillcolor=blue,
-			nodetype=purple];
-		grittenberger -- kirkpatrick;
-		grittenberger -- murphy;
-		göttling -- lyon;
-		göttling -- nuschke;
-		göttling -- willi;
-		kirkpatrick -- murphy;
-		lyon -- nuschke;
-		lyon -- willi;
-		mathews -- reinhardt;
-		meyer -- morner;
-		meyer -- murphy;
-		meyer -- rearns;
-		morner -- murphy;
-		morner -- rearns;
-		murphy -- rearns;
-		nuschke -- willi;
-	}
-	subgraph cluster2 {
-		graph [color=orange,
-			style=filled
-		];
-		barnes	[fillcolor=blue,
-			nodetype=orange];
-		carter	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- carter;
-		davies	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- davies;
-		joyce	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- joyce;
-		kennan	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- kennan;
-		savage	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- savage;
-		thompson	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- thompson;
-		wisner	[fillcolor=blue,
-			nodetype=orange];
-		barnes -- wisner;
-		carter -- davies;
-		carter -- joyce;
-		carter -- kennan;
-		carter -- savage;
-		carter -- thompson;
-		carter -- wisner;
-		davies -- joyce;
-		davies -- kennan;
-		davies -- savage;
-		davies -- thompson;
-		davies -- wisner;
-		joyce -- kennan;
-		joyce -- savage;
-		joyce -- thompson;
-		joyce -- wisner;
-		kennan -- savage;
-		kennan -- thompson;
-		kennan -- wisner;
-		savage -- thompson;
-		savage -- wisner;
-		thompson -- wisner;
-	}
-	subgraph cluster1 {
-		graph [color=red,
-			style=filled
-		];
-		dulles	[fillcolor=blue,
-			nodetype=red];
-	}
-	subgraph cluster7 {
-		graph [color=pink,
-			style=filled
-		];
-		arens	[fillcolor=blue,
-			nodetype=pink];
-		"de rivo"	[fillcolor=red,
-			nodetype=pink];
-		delgado	[fillcolor=blue,
-			nodetype=pink];
-		gellert	[fillcolor=blue,
-			nodetype=pink];
-		delgado -- gellert;
-		nagy	[fillcolor=red,
-			nodetype=pink];
-		delgado -- nagy;
-		dolbeare	[fillcolor=blue,
-			nodetype=pink];
-		durand	[fillcolor=blue,
-			nodetype=pink];
-		stevens	[fillcolor=blue,
-			nodetype=pink];
-		durand -- stevens;
-		gellert -- nagy;
-		gland	[fillcolor=red,
-			nodetype=pink];
-		juhast	[fillcolor=blue,
-			nodetype=pink];
-		kiraly	[fillcolor=blue,
-			nodetype=pink];
-		juhast -- kiraly;
-		recknagel	[fillcolor=blue,
-			nodetype=pink];
-		juhast -- recknagel;
-		kadar	[fillcolor=red,
-			nodetype=pink];
-		kadar -- nagy;
-		kahn	[fillcolor=blue,
-			nodetype=pink];
-		kelly	[fillcolor=blue,
-			nodetype=pink];
-		kici	[fillcolor=red,
-			nodetype=pink];
-		repishti	[fillcolor=red,
-			nodetype=pink];
-		kici -- repishti;
-		ujka	[fillcolor=red,
-			nodetype=pink];
-		kici -- ujka;
-		vido	[fillcolor=red,
-			nodetype=pink];
-		kici -- vido;
-		kiraly -- recknagel;
-		koch	[fillcolor=blue,
-			nodetype=pink];
-		kolzenburg	[fillcolor=red,
-			nodetype=pink];
-		magsaysay	[fillcolor=red,
-			nodetype=pink];
-		rhee	[fillcolor=red,
-			nodetype=pink];
-		magsaysay -- rhee;
-		maleter	[fillcolor=red,
-			nodetype=pink];
-		maleter -- nagy;
-		meeker	[fillcolor=blue,
-			nodetype=pink];
-		meeker -- nagy;
-		wailes	[fillcolor=blue,
-			nodetype=pink];
-		meeker -- wailes;
-		mikolajczk	[fillcolor=red,
-			nodetype=pink];
-		mikolajczk -- nagy;
-		nagy -- wailes;
-		"o'connor"	[fillcolor=blue,
-			nodetype=pink];
-		"o'shanughnessy"	[fillcolor=blue,
-			nodetype=pink];
-		raue	[fillcolor=red,
-			nodetype=pink];
-		ravndal	[fillcolor=red,
-			nodetype=pink];
-		repishti -- ujka;
-		repishti -- vido;
-		sokolli	[fillcolor=red,
-			nodetype=pink];
-		spahiu	[fillcolor=red,
-			nodetype=pink];
-		sokolli -- spahiu;
-		tenef	[fillcolor=red,
-			nodetype=pink];
-		sokolli -- tenef;
-		spahiu -- tenef;
-		taylor	[fillcolor=blue,
-			nodetype=pink];
-		ujka -- vido;
-		"usch-inger"	[fillcolor=red,
-			nodetype=pink];
-	}
+	adenauer	[fillcolor=white,
+		nodetype=yellow];
+	conant	[fillcolor=white,
+		nodetype=purple];
+	adenauer -- conant;
+	dulles	[fillcolor=white,
+		nodetype=purple];
 	adenauer -- dulles;
+	jackson	[fillcolor=white,
+		nodetype=green];
+	adenauer -- jackson;
+	kyes	[fillcolor=white,
+		nodetype=blue];
+	adenauer -- kyes;
+	morgan	[fillcolor=white,
+		nodetype=purple];
+	adenauer -- morgan;
+	smith	[fillcolor=white,
+		nodetype=pink];
+	adenauer -- smith;
+	stassen	[fillcolor=white,
+		nodetype=blue];
+	adenauer -- stassen;
+	arens	[fillcolor=white,
+		nodetype=pink];
+	aschan	[fillcolor=white,
+		nodetype=purple];
 	aschan -- dulles;
+	barbour	[fillcolor=white,
+		nodetype=purple];
+	barrett	[fillcolor=white,
+		nodetype=purple];
+	barbour -- barrett;
+	devine	[fillcolor=white,
+		nodetype=pink];
+	barbour -- devine;
 	barbour -- dulles;
+	joyce	[fillcolor=white,
+		nodetype=yellow];
 	barbour -- joyce;
+	kohler	[fillcolor=white,
+		nodetype=pink];
+	barbour -- kohler;
+	barnes	[fillcolor=white,
+		nodetype=orange];
+	bross	[fillcolor=white,
+		nodetype=purple];
 	barnes -- bross;
+	davies	[fillcolor=white,
+		nodetype=yellow];
+	barnes -- davies;
 	barnes -- dulles;
 	barnes -- jackson;
+	barnes -- joyce;
+	kennan	[fillcolor=white,
+		nodetype=pink];
+	barnes -- kennan;
+	ravndal	[fillcolor=white,
+		nodetype=purple];
 	barnes -- ravndal;
+	savage	[fillcolor=white,
+		nodetype=green];
+	barnes -- savage;
+	thompson	[fillcolor=white,
+		nodetype=green];
+	barnes -- thompson;
+	wisner	[fillcolor=white,
+		nodetype=orange];
+	barnes -- wisner;
+	barrett -- devine;
+	drumond	[fillcolor=white,
+		nodetype=blue];
+	barrett -- drumond;
 	barrett -- dulles;
+	gomulka	[fillcolor=red,
+		nodetype=purple];
+	barrett -- gomulka;
+	griffiths	[fillcolor=white,
+		nodetype=purple];
+	barrett -- griffiths;
 	barrett -- joyce;
+	barrett -- kohler;
+	mcgurn	[fillcolor=white,
+		nodetype=pink];
+	barrett -- mcgurn;
+	behoff	[fillcolor=white,
+		nodetype=green];
+	hoover	[fillcolor=white,
+		nodetype=green];
+	behoff -- hoover;
+	ladd	[fillcolor=white,
+		nodetype=blue];
+	behoff -- ladd;
+	lawrence	[fillcolor=white,
+		nodetype=green];
+	behoff -- lawrence;
+	poole	[fillcolor=white,
+		nodetype=blue];
+	behoff -- poole;
+	sheltt	[fillcolor=white,
+		nodetype=yellow];
+	behoff -- sheltt;
 	behoff -- wisner;
-	bennet -- dulles;
+	bennett	[fillcolor=white,
+		nodetype=purple];
+	bohlen	[fillcolor=white,
+		nodetype=purple];
 	bohlen -- dulles;
 	bohlen -- joyce;
+	mathews	[fillcolor=white,
+		nodetype=purple];
+	bohlen -- mathews;
+	reinhardt	[fillcolor=white,
+		nodetype=pink];
+	bohlen -- reinhardt;
 	bohlen -- smith;
 	bohlen -- wisner;
 	bross -- dulles;
 	bross -- jackson;
-	brown -- dulles;
-	brown -- joyce;
+	bruce	[fillcolor=white,
+		nodetype=purple];
+	foster	[fillcolor=white,
+		nodetype=blue];
+	bruce -- foster;
 	bruce -- smith;
 	conant -- dulles;
 	conant -- foster;
+	conant -- jackson;
+	conant -- kyes;
+	conant -- morgan;
+	conant -- smith;
+	conant -- stassen;
+	crittenberger	[fillcolor=red,
+		nodetype=orange];
+	davies -- joyce;
+	davies -- kennan;
+	davies -- savage;
+	davies -- thompson;
+	davies -- wisner;
+	"de rivo"	[fillcolor=red,
+		nodetype=orange];
+	delgado	[fillcolor=white,
+		nodetype=pink];
+	gellert	[fillcolor=white,
+		nodetype=blue];
+	delgado -- gellert;
+	nagy	[fillcolor=red,
+		nodetype=purple];
+	delgado -- nagy;
 	devine -- dulles;
 	devine -- joyce;
+	devine -- kohler;
+	dolbeare	[fillcolor=white,
+		nodetype=purple];
 	dolbeare -- wisner;
+	dosti	[fillcolor=red,
+		nodetype=pink];
+	ermenji	[fillcolor=red,
+		nodetype=yellow];
+	dosti -- ermenji;
+	fresheri	[fillcolor=red,
+		nodetype=purple];
+	dosti -- fresheri;
+	ketts	[fillcolor=red,
+		nodetype=orange];
+	dosti -- ketts;
+	kuni	[fillcolor=red,
+		nodetype=blue];
+	dosti -- kuni;
+	kupi	[fillcolor=red,
+		nodetype=blue];
+	dosti -- kupi;
+	kyresin	[fillcolor=red,
+		nodetype=yellow];
+	dosti -- kyresin;
+	markham	[fillcolor=white,
+		nodetype=purple];
+	dosti -- markham;
+	pali	[fillcolor=red,
+		nodetype=yellow];
+	dosti -- pali;
+	zog	[fillcolor=red,
+		nodetype=blue];
+	dosti -- zog;
+	drumond -- gomulka;
+	drumond -- griffiths;
+	drumond -- mcgurn;
+	eisenhower	[fillcolor=white,
+		nodetype=pink];
 	dulles -- eisenhower;
 	dulles -- foster;
-	dulles -- grittenberger;
-	dulles -- göttling;
 	dulles -- jackson;
 	dulles -- joyce;
+	kirkpatrick	[fillcolor=white,
+		nodetype=pink];
 	dulles -- kirkpatrick;
 	dulles -- kohler;
 	dulles -- kyes;
+	lyon	[fillcolor=white,
+		nodetype=purple];
 	dulles -- lyon;
 	dulles -- mathews;
+	meyer	[fillcolor=white,
+		nodetype=pink];
 	dulles -- meyer;
 	dulles -- morgan;
+	morner	[fillcolor=white,
+		nodetype=purple];
 	dulles -- morner;
+	murphy	[fillcolor=white,
+		nodetype=pink];
 	dulles -- murphy;
+	nuschke	[fillcolor=red,
+		nodetype=pink];
 	dulles -- nuschke;
+	oconnor	[fillcolor=white,
+		nodetype=pink];
+	dulles -- oconnor;
+	phillips	[fillcolor=white,
+		nodetype=green];
 	dulles -- phillips;
-	dulles -- rearns;
 	dulles -- reinhardt;
 	dulles -- smith;
 	dulles -- stassen;
+	stein	[fillcolor=white,
+		nodetype=pink];
 	dulles -- stein;
-	dulles -- willi;
 	dulles -- wisner;
+	durand	[fillcolor=white,
+		nodetype=red];
+	stevens	[fillcolor=white,
+		nodetype=pink];
+	durand -- stevens;
 	eisenhower -- gomulka;
+	eisenhower -- jackson;
+	eisenhower -- kyes;
+	magsaysay	[fillcolor=red,
+		nodetype=pink];
 	eisenhower -- magsaysay;
+	eisenhower -- morgan;
 	eisenhower -- nagy;
+	eisenhower -- oconnor;
+	eisenhower -- phillips;
+	rhee	[fillcolor=red,
+		nodetype=orange];
 	eisenhower -- rhee;
+	eisenhower -- smith;
+	eisenhower -- stassen;
+	eisenhower -- stein;
+	ermenji -- kupi;
+	ermenji -- zog;
 	foster -- jackson;
+	foster -- lyon;
+	foster -- nuschke;
 	foster -- smith;
+	fresheri -- ketts;
+	fresheri -- kuni;
+	fresheri -- kyresin;
+	fresheri -- markham;
+	fresheri -- pali;
+	gellert -- nagy;
+	gland	[fillcolor=white,
+		nodetype=pink];
+	goettling	[fillcolor=red,
+		nodetype=pink];
+	gomulka -- griffiths;
+	gomulka -- mcgurn;
 	gomulka -- nagy;
+	graf	[fillcolor=red,
+		nodetype=blue];
+	koch	[fillcolor=white,
+		nodetype=purple];
 	graf -- koch;
+	konkoly	[fillcolor=red,
+		nodetype=pink];
+	graf -- konkoly;
+	leason	[fillcolor=white,
+		nodetype=green];
+	graf -- leason;
+	palasthy	[fillcolor=red,
+		nodetype=blue];
+	graf -- palasthy;
+	popa	[fillcolor=red,
+		nodetype=blue];
+	graf -- popa;
+	rademaekers	[fillcolor=white,
+		nodetype=pink];
+	graf -- rademaekers;
+	steele	[fillcolor=white,
+		nodetype=yellow];
+	graf -- steele;
+	griffiths -- mcgurn;
+	hier	[fillcolor=white,
+		nodetype=purple];
+	hier -- hoover;
+	leiser	[fillcolor=red,
+		nodetype=green];
+	hier -- leiser;
+	ponikiewski	[fillcolor=red,
+		nodetype=green];
+	hier -- ponikiewski;
 	hier -- thompson;
+	tormay	[fillcolor=red,
+		nodetype=pink];
+	hier -- tormay;
+	higgs	[fillcolor=white,
+		nodetype=purple];
+	hoover -- ladd;
+	hoover -- lawrence;
+	hoover -- ponikiewski;
+	hoover -- poole;
+	hoover -- sheltt;
+	hoover -- tormay;
 	hoover -- wisner;
+	jackson -- kyes;
+	jackson -- morgan;
+	jackson -- oconnor;
+	jackson -- phillips;
+	jackson -- smith;
+	jackson -- stassen;
+	jackson -- stein;
 	jackson -- wisner;
+	joyce -- kennan;
 	joyce -- kohler;
 	joyce -- mathews;
 	joyce -- reinhardt;
+	joyce -- savage;
 	joyce -- smith;
+	joyce -- thompson;
+	joyce -- wisner;
+	juhast	[fillcolor=white,
+		nodetype=orange];
+	kiraly	[fillcolor=white,
+		nodetype=pink];
+	juhast -- kiraly;
+	recknagel	[fillcolor=white,
+		nodetype=purple];
+	juhast -- recknagel;
+	kadar	[fillcolor=red,
+		nodetype=pink];
+	kadar -- nagy;
+	kahn	[fillcolor=white,
+		nodetype=pink];
+	kelly	[fillcolor=white,
+		nodetype=pink];
+	mikolajczk	[fillcolor=red,
+		nodetype=yellow];
 	kennan -- mikolajczk;
 	kennan -- nagy;
+	kennan -- savage;
+	kennan -- thompson;
+	kennan -- wisner;
+	ketts -- kuni;
+	ketts -- kyresin;
+	ketts -- markham;
+	ketts -- pali;
+	kici	[fillcolor=red,
+		nodetype=blue];
+	repishti	[fillcolor=red,
+		nodetype=pink];
+	kici -- repishti;
+	ujka	[fillcolor=red,
+		nodetype=pink];
+	kici -- ujka;
+	vido	[fillcolor=red,
+		nodetype=pink];
+	kici -- vido;
+	kiraly -- recknagel;
+	kirkpatrick -- murphy;
 	koch -- konkoly;
+	koch -- leason;
 	koch -- palasthy;
 	koch -- popa;
 	koch -- rademaekers;
 	koch -- steele;
+	kolzenburg	[fillcolor=red,
+		nodetype=purple];
+	konkoly -- leason;
+	konkoly -- palasthy;
+	konkoly -- popa;
+	konkoly -- rademaekers;
+	konkoly -- steele;
+	kuni -- kyresin;
+	kuni -- markham;
+	kuni -- pali;
+	kupi -- zog;
+	kyes -- morgan;
+	kyes -- oconnor;
+	kyes -- phillips;
+	kyes -- smith;
+	kyes -- stassen;
+	kyes -- stein;
+	kyresin -- markham;
+	kyresin -- pali;
+	ladd -- lawrence;
+	ladd -- poole;
+	ladd -- sheltt;
 	ladd -- wisner;
+	lawrence -- poole;
+	lawrence -- sheltt;
 	lawrence -- wisner;
+	leason -- palasthy;
+	leason -- popa;
+	leason -- rademaekers;
+	leason -- steele;
+	leiser -- ponikiewski;
 	leiser -- thompson;
+	leiser -- tormay;
+	lyon -- nuschke;
+	magruder	[fillcolor=white,
+		nodetype=pink];
+	magsaysay -- rhee;
+	maleter	[fillcolor=red,
+		nodetype=blue];
+	maleter -- nagy;
+	oshanughnessy	[fillcolor=white,
+		nodetype=blue];
+	maleter -- oshanughnessy;
+	markham -- pali;
+	mathews -- reinhardt;
 	mathews -- smith;
 	mathews -- wisner;
+	meeker	[fillcolor=white,
+		nodetype=purple];
+	meeker -- nagy;
 	meeker -- thompson;
+	wailes	[fillcolor=white,
+		nodetype=purple];
+	meeker -- wailes;
+	meyer -- morner;
+	meyer -- murphy;
 	meyer -- wisner;
+	mikolajczk -- nagy;
+	morgan -- oconnor;
+	morgan -- phillips;
+	morgan -- smith;
+	morgan -- stassen;
+	morgan -- stein;
+	morner -- murphy;
+	nagy -- oshanughnessy;
 	nagy -- thompson;
+	nagy -- wailes;
+	oconnor -- phillips;
+	oconnor -- smith;
+	oconnor -- stassen;
+	oconnor -- stein;
+	palasthy -- popa;
+	palasthy -- rademaekers;
+	palasthy -- steele;
+	sokolli	[fillcolor=red,
+		nodetype=pink];
 	pali -- sokolli;
+	phillips -- smith;
+	phillips -- stassen;
+	phillips -- stein;
 	ponikiewski -- thompson;
+	ponikiewski -- tormay;
+	poole -- sheltt;
 	poole -- wisner;
+	popa -- rademaekers;
+	popa -- steele;
+	rademaekers -- steele;
+	raue	[fillcolor=grey,
+		nodetype=pink];
+	reams	[fillcolor=white,
+		nodetype=pink];
 	reinhardt -- smith;
 	reinhardt -- wisner;
+	repishti -- ujka;
+	repishti -- vido;
+	savage -- thompson;
+	savage -- wisner;
 	sheltt -- wisner;
+	smith -- stassen;
+	smith -- stein;
 	smith -- wisner;
+	spahiu	[fillcolor=red,
+		nodetype=yellow];
+	sokolli -- spahiu;
+	tenef	[fillcolor=red,
+		nodetype=orange];
+	sokolli -- tenef;
+	spahiu -- tenef;
+	stassen -- stein;
+	taylor	[fillcolor=white,
+		nodetype=pink];
 	thompson -- tormay;
 	thompson -- wailes;
+	thompson -- wisner;
+	ujka -- vido;
+	"usch-inger"	[fillcolor=grey,
+		nodetype=pink];
 }
